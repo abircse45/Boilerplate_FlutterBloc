@@ -1,4 +1,4 @@
-import '../../core/network/api_client.dart';
+import '../../../../core/network/api_client.dart';
 import '../models/post_model.dart';
 import '../../domain/entities/post/post_entity.dart';
 import '../../domain/repositories/post_repository.dart';
@@ -17,8 +17,6 @@ class PostRepositoryImpl implements PostRepository {
       return (data as List).map((json) => PostModel.fromJson(json)).toList();
     } catch (e, stack) {
       print('API Error:');
-      print(e);
-      print(stack);
       rethrow;
     }
   }
